@@ -34,9 +34,30 @@ console.log('\nTHIS IS TEMPLATE STRING: ');
 console.log(sentence);
 //array, there are two way to initiate
 var list = [1, 2, 3];
-console.log('\nTHIS IS ARRAY');
+console.log('\nTHIS IS ARRAY: ');
 console.log('first way: ');
 console.log(list);
 var list2 = [1, 2, 3];
 console.log('second way: ');
 console.log(list2);
+//tuple
+//tuple is array with fixed number of element with known types but need not be the same
+var tuple;
+tuple = ["hello", 1, '1123', false];
+console.log('\n THIS IS TUPLE: ');
+console.log(tuple);
+console.log("tuple third element: " + tuple[2]);
+//enum
+//is a way of defining constant
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+;
+var c = Color.Green;
+console.log('\n THIS IS ENUM: ');
+console.log(Color);
+console.log('using enum, getting green color value:');
+console.log(c);

@@ -41,12 +41,49 @@ console.log(sentence);
 
 //array, there are two way to initiate
 let list: number[] = [1,2,3];
-console.log('\nTHIS IS ARRAY');
+console.log('\nTHIS IS ARRAY: ');
 console.log('first way: ');
 console.log(list);
 let list2: Array<number> = [1,2,3];
 console.log('second way: ');
 console.log(list2);
+
+//tuple
+//tuple is array with fixed number of element with known types but need not be the same
+let tuple: [string, number, string, boolean];
+tuple = ["hello",1,'1123',false];
+console.log('\n THIS IS TUPLE: ');
+console.log(tuple);
+console.log(`tuple third element: ${tuple[2]}`);
+
+//enum
+//is a way of defining constant
+enum Color {Red, Green, Blue};
+let c: Color = Color.Green;
+console.log('\n THIS IS ENUM: ')
+console.log(Color);
+console.log('using enum, getting green color value:');
+console.log(c);
+
+//any
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false;
+console.log('\n THIS IS ANY: ');
+console.log(notSure);
+let anyList: any[] = [1,true,'free'];
+console.log('for array: ');
+console.log(list);
+
+
+//void
+//for function to not return anything
+function warnUser(): void{
+    console.log("this is a warning message");
+}
+console.log('\n THIS IS VOID: ');
+warnUser();
+
 
 
 
